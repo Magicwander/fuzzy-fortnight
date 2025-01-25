@@ -18,48 +18,6 @@ function App() {
   });
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Load files from the cpp-scripts directory
-    const loadFiles = async () => {
-      try {
-        // Example files for demonstration
-        setFiles([
-          {
-            name: 'Hello World',
-            path: '/cpp-scripts/hello_world.cpp',
-            content: '',
-            timeSpent: 1,
-            difficulty: 'Beginner',
-            category: 'Basics'
-          },
-          {
-            name: 'Vectors',
-            path: '/cpp-scripts/vectors.cpp',
-            content: ``,
-            timeSpent: 1,
-            difficulty: 'Beginner',
-            category: 'Memory Management'
-          },
-          {
-            name: 'Templates',
-            path: '/cpp-scripts/templates.cpp',
-            content: '',
-            timeSpent: 2,
-            difficulty: 'Intermediate',
-            category: 'Generic Programming'
-          },
-          {
-            name: 'Variables',
-            path: '/cpp-scripts/variables.cpp',
-            content: `#include <iostream>\n\nint main() {\n    int a = 5;\n    float b = 3.14;\n    char c = 'A';\n    std::string d = "Hello, World!";\n    std::cout << "Integer: " << a << std::endl;\n    std::cout << "Float: " << b << std::endl;\n    std::cout << "Character: " << c << std::endl;\n    std::cout << "String: " << d << std::endl;\n    return 0;\n}`,
-            timeSpent: 1,
-            difficulty: 'Beginner',
-            category: 'Basics'
-          }
-        ]);
-      } catch (error) {
-        console.error('Error loading files:', error);
-=======
     // Load files from the cpp-scripts directory inside the public folder
     setFiles([
       {
@@ -269,10 +227,10 @@ function App() {
         timeSpent: 1,
         difficulty: 'Beginner',
         category: 'Control Flow',
->>>>>>> c734d54 (Your commit message)
       }
     ]);
   }, []);
+
   const handleFileSelect = async (file: CppFile) => {
     console.log('Selected file:', file);
 
