@@ -19,6 +19,43 @@ function App() {
 
   useEffect(() => {
     // Initialize the files
+     setFiles([
+          {
+            name: 'Hello World',
+            path: '/cpp-scripts/hello_world.cpp',
+            content: '',
+            timeSpent: 1,
+            difficulty: 'Beginner',
+            category: 'Basics'
+          },
+          {
+            name: 'Vectors',
+            path: '/cpp-scripts/vectors.cpp',
+            content: ``,
+            timeSpent: 1,
+            difficulty: 'Beginner',
+            category: 'Memory Management'
+          },
+          {
+            name: 'Templates',
+            path: '/cpp-scripts/templates.cpp',
+            content: '',
+            timeSpent: 2,
+            difficulty: 'Intermediate',
+            category: 'Generic Programming'
+          },
+          {
+            name: 'Variables',
+            path: '/cpp-scripts/variables.cpp',
+            content: `#include <iostream>\n\nint main() {\n    int a = 5;\n    float b = 3.14;\n    char c = 'A';\n    std::string d = "Hello, World!";\n    std::cout << "Integer: " << a << std::endl;\n    std::cout << "Float: " << b << std::endl;\n    std::cout << "Character: " << c << std::endl;\n    std::cout << "String: " << d << std::endl;\n    return 0;\n}`,
+            timeSpent: 1,
+            difficulty: 'Beginner',
+            category: 'Basics'
+          }
+        ]);
+      } catch (error) {
+        console.error('Error loading files:', error);
+    // Load files from the cpp-scripts directory inside the public folder
     setFiles([
       {
         name: 'Abstraction',
@@ -60,10 +97,176 @@ function App() {
         difficulty: 'Advanced',
         category: 'Concurrency',
       },
-      // Add other files as needed
+      {
+        name: 'Constructors and Destructors',
+        path: '/cpp-scripts/ConstructorsAndDestructors.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'OOP',
+      },
+      {
+        name: 'Dynamic Memory Allocation',
+        path: '/cpp-scripts/DynamicMemoryAllocation.cpp',
+        content: '',
+        timeSpent: 2,
+        difficulty: 'Intermediate',
+        category: 'Memory Management',
+      },
+      {
+        name: 'Encapsulation',
+        path: '/cpp-scripts/Encapsulation.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'OOP',
+      },
+      {
+        name: 'Exception Handling',
+        path: '/cpp-scripts/ExceptionHandling.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Intermediate',
+        category: 'Error Handling',
+      },
+      {
+        name: 'File Handling',
+        path: '/cpp-scripts/FileHandling.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Intermediate',
+        category: 'File I/O',
+      },
+      {
+        name: 'Friend Functions',
+        path: '/cpp-scripts/FriendFunctions.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Intermediate',
+        category: 'OOP',
+      },
+      {
+        name: 'Function Overloading',
+        path: '/cpp-scripts/FunctionOverloading.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'Functions',
+      },
+      {
+        name: 'Function Pointers',
+        path: '/cpp-scripts/FunctionPointers.cpp',
+        content: '',
+        timeSpent: 2,
+        difficulty: 'Advanced',
+        category: 'Functions',
+      },
+      {
+        name: 'Graph Theory',
+        path: '/cpp-scripts/GraphTheory.cpp',
+        content: '',
+        timeSpent: 2,
+        difficulty: 'Advanced',
+        category: 'Algorithms',
+      },
+      {
+        name: 'Heap',
+        path: '/cpp-scripts/Heap.cpp',
+        content: '',
+        timeSpent: 2,
+        difficulty: 'Intermediate',
+        category: 'Data Structures',
+      },
+      {
+        name: 'Hello',
+        path: '/cpp-scripts/Hello.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'Basics',
+      },
+      {
+        name: 'Inheritance',
+        path: '/cpp-scripts/Inheritance.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'OOP',
+      },
+      {
+        name: 'Iterator',
+        path: '/cpp-scripts/Iterator.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Intermediate',
+        category: 'Data Structures',
+      },
+      {
+        name: 'Lambda Functions',
+        path: '/cpp-scripts/LambdaFunctions.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Intermediate',
+        category: 'Functions',
+      },
+      {
+        name: 'Linked List',
+        path: '/cpp-scripts/LinkedList.cpp',
+        content: '',
+        timeSpent: 2,
+        difficulty: 'Intermediate',
+        category: 'Data Structures',
+      },
+      {
+        name: 'List',
+        path: '/cpp-scripts/List.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'Data Structures',
+      },
+      {
+        name: 'Map',
+        path: '/cpp-scripts/Map.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Intermediate',
+        category: 'Data Structures',
+      },
+      {
+        name: 'Array',
+        path: '/cpp-scripts/array.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'Data Structures',
+      },
+      {
+        name: 'Condition',
+        path: '/cpp-scripts/condition.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'Control Flow',
+      },
+      {
+        name: 'Functions',
+        path: '/cpp-scripts/functions.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'Functions',
+      },
+      {
+        name: 'Loop',
+        path: '/cpp-scripts/loop.cpp',
+        content: '',
+        timeSpent: 1,
+        difficulty: 'Beginner',
+        category: 'Control Flow',
+      }
     ]);
   }, []);
-
   const handleFileSelect = async (file: CppFile) => {
     console.log('Selected file:', file);
 
