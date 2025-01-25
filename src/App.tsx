@@ -22,30 +22,7 @@ function App() {
     const initializeFiles = async () => {
       try {
         setFiles([
-          {
-            name: 'Hello World',
-            path: '/cpp-scripts/hello_world.cpp',
-            content: '',
-            timeSpent: 1,
-            difficulty: 'Beginner',
-            category: 'Basics'
-          },
-          {
-            name: 'Vectors',
-            path: '/cpp-scripts/vectors.cpp',
-            content: ``,
-            timeSpent: 1,
-            difficulty: 'Beginner',
-            category: 'Memory Management'
-          },
-          {
-            name: 'Templates',
-            path: '/cpp-scripts/templates.cpp',
-            content: '',
-            timeSpent: 2,
-            difficulty: 'Intermediate',
-            category: 'Generic Programming'
-          },
+          
           {
             name: 'Variables',
             path: '/cpp-scripts/variables.cpp',
