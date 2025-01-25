@@ -18,7 +18,7 @@ function App() {
   });
 
   useEffect(() => {
-    // Load files from the cpp-scripts directory inside the public folder
+    // Initialize the files
     setFiles([
       {
         name: 'Abstraction',
@@ -60,7 +60,7 @@ function App() {
         difficulty: 'Advanced',
         category: 'Concurrency',
       },
-      // Add more files as needed
+      // Add other files as needed
     ]);
   }, []);
 
@@ -68,8 +68,8 @@ function App() {
     console.log('Selected file:', file);
 
     try {
-      // Modify the URL to fetch the raw content from GitHub
-      const rawUrl = `https://raw.githubusercontent.com/Magicwander/fuzzy-fortnight/main${file.path.replace('/cpp-scripts', '')}`;
+      // Construct the raw URL for the file content
+      const rawUrl = `https://raw.githubusercontent.com/Magicwander/fuzzy-fortnight/main${file.path}`;
       
       const response = await fetch(rawUrl);
       if (!response.ok) {
